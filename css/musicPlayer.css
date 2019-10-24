@@ -1,0 +1,76 @@
+.music_player_box {
+    width: 346px;
+    height: 400px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.music_player_box:hover .player_btn {
+    opacity: 1;
+    transition: all .3s;
+}
+
+.music_player_box .player_btn {
+    width: 100%;
+    height: 33px;
+    background-image: linear-gradient(#8b8b8b, #ffffff);
+    opacity: 0;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.music_player_box .player_btn .last {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/playbar.png);
+    background-repeat: no-repeat;
+    background-position: -2px -130px;
+}
+
+.music_player_box .player_btn .last:hover {
+    background-position: -32px -130px;
+}
+
+.music_player_box .player_btn .next {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/playbar.png);
+    background-repeat: no-repeat;
+    background-position: -82px -130px;
+}
+
+.music_player_box .player_btn .next:hover {
+    background-position: -112px -130px;
+}
+
+.music_player_box .player_btn .play {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/playbar.png);
+    background-repeat: no-repeat;
+    background-position: -2px -165px;
+}
+
+.music_player_box .player_btn .play:hover {
+    background-position: -42px -165px;
+}
+
+.music_player_box .player_btn .suspend {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/playbar.png);
+    background-repeat: no-repeat;
+    background-position: -2px -204px;
+}
+
+.music_player_box .player_btn .suspend:hover {
+    background-position: -42px -204px;
+}

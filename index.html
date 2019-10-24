@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./images/test_icon.ico">
     <title>MyWebPage</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/musicPlayer.css">
 </head>
 
 <body>
@@ -32,7 +33,20 @@
             </div>
         </div>
     </div>
+    <!-- 音乐播放器 -->
+    <div class="music_player_box">
+        <audio id="audio" autoplay>
+        </audio>
+        <div class="player_btn">
+            <span id="last" class="last"></span>
+            <span id="play" class="play"></span>
+            <span id="next" class="next"></span>
+        </div>
+        <img src="http://47.106.38.84/images/dance.gif" title="蹦蹦跳跳">
+    </div>
 
+    <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/musicPlayer.js"></script>
 </body>
 
 </html>
