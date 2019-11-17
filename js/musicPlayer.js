@@ -1,10 +1,10 @@
-$(function() {
+$(function () {
 	let musicList;
 	$.ajax({
 		type: 'get',
 		timeout: 10000,
 		url: 'http://47.106.38.84:8000/v1/music/list',
-		success: function(data) {
+		success: function (data) {
 			for (let i = 0; i < data.data.length; i++) {
 				data.data[i] = 'http://47.106.38.84:8000/' + data.data[i];
 			}
@@ -13,17 +13,17 @@ $(function() {
 			$('#audio').html(source);
 			// console.log('音乐列表 == > ', data);
 		},
-		error: function(err) {
+		error: function (err) {
 			// console.log(err);
 		},
-		complete: function(XMLHttpRequest, status) {
+		complete: function (XMLHttpRequest, status) {
 			// console.log('XMLHttpRequest', XMLHttpRequest);
 			// console.log('status', status);
 		}
 	});
 	let musicListNum = 0;
 	let playStatus = true;
-	$('.player_btn').delegate('#play', 'click', function(e) {
+	$('.player_btn').delegate('#play', 'click', function (e) {
 		e.preventDefault();
 		if (!playStatus) {
 			playStatus = true;
@@ -41,19 +41,19 @@ $(function() {
 			$('.player_btn').html(playerBtn);
 		}
 	});
-	$('.player_btn').delegate('#last', 'click', function(e) {
+	$('.player_btn').delegate('#last', 'click', function (e) {
 		e.preventDefault();
 		musicListNum--;
 		if (musicListNum == -1) musicListNum = musicList.length - 1;
 		$('#audio')[0].src = musicList[musicListNum];
 	});
-	$('.player_btn').delegate('#next', 'click', function(e) {
+	$('.player_btn').delegate('#next', 'click', function (e) {
 		e.preventDefault();
 		musicListNum++;
 		if (musicListNum > musicList.length - 1) musicListNum = 0;
 		$('#audio')[0].src = musicList[musicListNum];
 	});
-	$('#audio').bind('ended', function() {
+	$('#audio').bind('ended', function () {
 		musicListNum++;
 		if (musicListNum > musicList.length - 1) musicListNum = 0;
 		$('#audio')[0].src = musicList[musicListNum];
