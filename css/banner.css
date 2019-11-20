@@ -1,0 +1,59 @@
+.banner_box {
+    width: 280px;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.banner_box img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.banner_box .banner_hide {
+    transition: all .6s;
+    opacity: 0;
+}
+
+.banner_box .banner_show {
+    transition: all .6s;
+    opacity: 1;
+}
+
+.banner_box .let_last {
+    width: 37px;
+    height: 63px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-position: 0 -360px;
+    cursor: pointer;
+}
+
+.banner_box .let_last:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.banner_box .let_next {
+    width: 37px;
+    height: 63px;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-position: 0 -508px;
+    cursor: pointer;
+}
+
+.banner_box .let_next:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}

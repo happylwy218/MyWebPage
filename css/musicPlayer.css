@@ -1,8 +1,8 @@
 .music_player_box {
-    width: 346px;
-    height: 400px;
+    width: 280px;
+    height: 320px;
     position: fixed;
-    right: 0;
+    left: 0;
     bottom: 0;
     cursor: pointer;
 }
@@ -14,7 +14,7 @@
 
 .music_player_box .player_btn {
     width: 100%;
-    height: 33px;
+    height: 40px;
     background-image: linear-gradient(#8b8b8b, #ffffff);
     opacity: 0;
     transition: all .3s;
@@ -73,4 +73,56 @@
 
 .music_player_box .player_btn .suspend:hover {
     background-position: -42px -204px;
+}
+
+.music_player_box .music_bg {
+    width: 280px;
+    height: 280px;
+}
+
+.music_player_box .music_bg img {
+    width: 280px;
+    height: 280px;
+    opacity: 0.6;
+}
+
+.music_player_box .mask {
+    width: 280px;
+    height: 280px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music_player_box .mask .music_bg_animation {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    animation: rotation 10s linear infinite
+}
+
+@keyframes rotation {
+
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    25% {
+        -webkit-transform: rotate(90deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(270deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }

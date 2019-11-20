@@ -12,7 +12,9 @@ a {
     height: 170px;
     background: url(http://47.106.38.84/images/bilibili_Banner2.png) no-repeat;
     background-position: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .top_nav_bg .navbar {
